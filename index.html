@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evan's Pomodoro Website</title>
+
+    <!--CSS File-->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="input">
+        <input
+          type="number"
+          id="studyTimeInput"
+          placeholder="Studying time (minutes)"
+        />
+
+        <input
+          type="number"
+          id="breakTimeInput"
+          placeholder="Break time (minutes)"
+        />
+      </div>
+
+      <p id="studyTimeDisplay">Study Time:</p>
+      <p id="breakTimeDisplay">Break Time:</p>
+
+      <div class="timer">
+        <p id="minutes">00</p>
+        <p>:</p>
+        <p id="seconds">00</p>
+      </div>
+
+      <button id="stopBtn">Stop</button>
+
+      <button id="start" , onclick="startTimer()">Start</button>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
