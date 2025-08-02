@@ -1,31 +1,18 @@
-let studyTime; //Variable to hold the studying time
-let breakTime; //Variable to hold the break time
+let studyTime = 0; //Variable to hold the studying time
+let breakTime = 0; //Variable to hold the break time
 
 // Add event listeners to the input fields to listen for the "Enter" key press
-document
-  .getElementById("studyTimeInput")
-  .addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      assignNumber(event);
-    }
-  });
+document.getElementById("studyTimeInput").addEventListener("input", (event) => {
+  studyTime = parseInt(event.target.value) || 0;
+  assignNumber();
+});
 
-document
-  .getElementById("breakTimeInput")
-  .addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      assignNumber(event);
-    }
-  });
+document.getElementById("breakTimeInput").addEventListener("input", (event) => {
+  breakTime = parseInt(event.target.value) || 0;
+  assignNumber();
+});
 
-function assignNumber(event) {
-  // Get values from both input fields
-  let studyTimeInput = document.getElementById("studyTimeInput").value;
-  let breakTimeInput = document.getElementById("breakTimeInput").value;
-
-  // Convert the input values to numbers
-  studyTime = Number(studyTimeInput);
-  breakTime = Number(breakTimeInput);
+function assignNumber() {
   //Display the values
   document.getElementById("studyTimeDisplay").innerText =
     "Study Time: " + studyTime + " minutes";
@@ -53,9 +40,9 @@ function startTimer() {
           minutes = breakTime;
           seconds = 0;
         } else {
-          phase = "study"
-          minutes = studyTime
-          seconds = 0
+          phase = "study";
+          minutes = studyTime;
+          seconds = 0;
         }
       } else {
         minutes--;
@@ -68,13 +55,11 @@ function startTimer() {
   };
   render();
   const timerID = setInterval(countdown, 1000); //Stores id of the countdown to be stopped laterß
-  document
-    .getElementById("stopBtn")
-    .addEventListener("click", () => {
-      clearInterval(timerID);
-      minutes = studyTime;
-      seconds = 0;
-      phase = "study";
-      render();
-    });
+  document.getElementById("stopBtn").addEventListener("click", () => {
+    clearInterval(timerID);
+    minutes = studyTime;
+    seconds = 0;
+    phase = "study";
+    render();
+  });
 }
