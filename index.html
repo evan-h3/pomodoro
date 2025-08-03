@@ -10,6 +10,32 @@
   </head>
   <body>
     <main>
+      <div class="timer-container">
+        <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+          <circle
+            cx="150"
+            cy="150"
+            r="140"
+            stroke="white"
+            stroke-width="10"
+            fill="none"
+          />
+        </svg>
+  
+        <div class="timer">
+          <p id="minutes">00</p>
+          <p>:</p>
+          <p id="seconds">00</p>
+        </div>
+        <div class="controls">
+          <button id="stopBtn">Stop</button>
+        <button id="startBtn" , onclick="startTimer()">Start</button>
+        </div>
+        
+        
+      </div>
+      
+
       <div class="input">
         <input
           type="number"
@@ -27,15 +53,6 @@
       <p id="studyTimeDisplay">Study Time:</p>
       <p id="breakTimeDisplay">Break Time:</p>
 
-      <div class="timer">
-        <p id="minutes">00</p>
-        <p>:</p>
-        <p id="seconds">00</p>
-      </div>
-
-      <button id="stopBtn">Stop</button>
-
-      <button id="start" , onclick="startTimer()">Start</button>
     </main>
     <script src="script.js"></script>
   </body>

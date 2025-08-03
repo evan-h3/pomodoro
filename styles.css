@@ -22,8 +22,28 @@ html, body {
   margin: 0; /* Reset margin */
 }
 
-.timer {
-  display: flex;
-  justify-content: center;
+.circle-container {
+  position: relative;
+  width: 300px;    /* match the SVG size */
+  height: 300px;   /* match the SVG size */
 }
 
+.timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 32px;
+}
+
+.controls {
+  position: absolute;      /* pull it out of flow, overlaying the SVG */
+  bottom: 45%;            /* 20px up from the bottom edge of the container */
+  left: 50%;               /* start at 50% across */
+  transform: translateX(-50%);  /* shift back by half its width to center */
+  display: flex;           /* lay the buttons out in a row */
+  gap: 8px;                /* space between buttons */
+}
