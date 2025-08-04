@@ -32,7 +32,22 @@ function startTimer() {
       (seconds < 10 ? "0" : "") + seconds;
   };
 
+  const circle = document.getElementById("timer-circle"); //get the timer circle
+  const radius = circle.r.baseVal.value; //get the radius from the circle
+  const circumference = 2 * Math.PI * radius; // calculate the circumference
+  console.log("radius:", radius, "circumference:", circumference);
+  circle.style.strokeDasharray = circumference;
+  circle.style.strokeDashoffset = circumference;
+
+  // total length in seconds for each phase
+  const totalStudySeconds = studyTime * 60;
+  const totalBreakSeconds = breakTime * 60;
+
   let countdown = () => {
+    //Decide which seconds to use for the offset for the circle
+    const totalSeconds =
+      phase === "study" ? totalStudySeconds : totalBreakSeconds;
+
     if (seconds === 0) {
       if (minutes === 0) {
         if (phase === "study") {
@@ -51,6 +66,12 @@ function startTimer() {
     } else {
       seconds--;
     }
+    const secondsLeft = minutes * 60 + seconds;
+    const fraction = secondsLeft / totalSeconds;
+
+    // “1 – fraction” because an offset of 0 shows the full ring
+    circle.style.strokeDashoffset = circumference * fraction;
+
     render();
   };
   render();
