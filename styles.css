@@ -1,7 +1,15 @@
+:root {
+  --color-primary: rgb(3, 63, 119);
+  --color-accent:  #457b9d;
+  --timer-fill:  #86d7ff;
+  
+}
+
 * {
   margin:0;
   padding:0;
   box-sizing: border-box;
+  
 }
 
 html, body {
@@ -9,10 +17,11 @@ html, body {
   display: flex;
   flex-direction: column;
   color: white; /* Text Color */
-  font-family: sans-serif; 
+  font-family: "Sour Gummy", sans-serif; 
   align-items: center;
   justify-content: center;
-  background: rgb(3, 63, 119)
+  background: var(--color-primary);
+  color: white
 }
 
 #studyTimeInput, #breakTimeInput {
@@ -26,6 +35,11 @@ html, body {
   position: relative;
   width: 300px;    /* match the SVG size */
   height: 300px;   /* match the SVG size */
+}
+
+.timer-container svg {
+  /* x-offset, y-offset, blur-radius, color */
+  filter: drop-shadow(0px 4px 8px  var(--color-accent));
 }
 
 .timer {
@@ -42,7 +56,9 @@ html, body {
 #timer-circle {
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
+  stroke: var(--timer-fill);
 }
+
 
 .controls {
   position: absolute;      /* pull it out of flow, overlaying the SVG */
