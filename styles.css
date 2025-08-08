@@ -24,6 +24,11 @@ html, body {
   color: white
 }
 
+#title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 #studyTimeInput, #breakTimeInput {
   -webkit-appearance: none; /* Chrome, Safari, Opera */
   -moz-appearance: textfield; /* Firefox */
@@ -59,6 +64,11 @@ html, body {
   stroke: var(--timer-fill);
 }
 
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 
 .controls {
   position: absolute;      /* pull it out of flow, overlaying the SVG */

@@ -69,13 +69,13 @@ function startTimer() {
     const secondsLeft = minutes * 60 + seconds;
     const fraction = secondsLeft / totalSeconds;
 
-    // “1 – fraction” because an offset of 0 shows the full ring
+    // “fraction” because an offset of 0 shows the full ring
     circle.style.strokeDashoffset = circumference * fraction;
 
     render();
   };
   render();
-  const timerID = setInterval(countdown, 1000); //Stores id of the countdown to be stopped laterß
+  const timerID = setInterval(countdown, 1000); //Stores id of the countdown to be stopped later
   document.getElementById("stopBtn").addEventListener("click", () => {
     clearInterval(timerID);
     minutes = studyTime;
