@@ -68,6 +68,12 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+  background-color: transparent;
+}
+
+button img{
+  width: 30px;
+  height: auto;
 }
 
 .controls {

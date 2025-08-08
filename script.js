@@ -76,7 +76,7 @@ function startTimer() {
   };
   render();
   const timerID = setInterval(countdown, 1000); //Stores id of the countdown to be stopped later
-  document.getElementById("stopBtn").addEventListener("click", () => {
+  document.getElementById("restartBtn").addEventListener("click", () => {
     clearInterval(timerID);
     minutes = studyTime;
     seconds = 0;
