@@ -1,7 +1,7 @@
 :root {
   --color-primary: rgb(3, 63, 119);
   --color-accent:  #457b9d;
-  --timer-fill:  #86d7ff;
+  --timer-fill:  #a5e8ff;
   
 }
 
@@ -65,15 +65,10 @@ html, body {
 }
 
 button {
+  font-size: 2rem;
+  background: none;
   border: none;
-  outline: none;
   cursor: pointer;
-  background-color: transparent;
-}
-
-button img{
-  width: 30px;
-  height: auto;
 }
 
 .controls {
