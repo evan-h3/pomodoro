@@ -21,53 +21,54 @@
       <div id="title">
         <h2>Pomodoro Timer</h2>
       </div>
-      <div class="timer-container">
-        <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
-          <!-- 1) The “track” circle (static background) -->
-          <circle cx="150" cy="150" r="140" stroke="#457b9d"stroke-width="10" fill="none" />
+      <div id="layout">
+        <div class="timer-container">
+          <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+            <!-- 1) The “track” circle (static background) -->
+            <circle
+              cx="150"
+              cy="150"
+              r="140"
+              stroke="#457b9d"
+              stroke-width="10"
+              fill="none"
+            />
 
-          <!-- 2) The animated progress circle -->
-          <circle
-            id="timer-circle"
-            cx="150"
-            cy="150"
-            r="140"
-            stroke="white"
-            stroke-width="10"
-            fill="none"
-            transform="rotate(-90 150 150)"
-          />
-        </svg>
+            <!-- 2) The animated progress circle -->
+            <circle
+              id="timer-circle"
+              cx="150"
+              cy="150"
+              r="140"
+              stroke="white"
+              stroke-width="10"
+              fill="none"
+              transform="rotate(-90 150 150)"
+            />
+          </svg>
 
-        <div class="timer">
-          <p id="minutes">00</p>
-          <p>:</p>
-          <p id="seconds">00</p>
+          <div class="timer">
+            <p id="minutes">00</p>
+            <p>:</p>
+            <p id="seconds">00</p>
+          </div>
+          <div class="controls">
+            <button id="restartBtn" class="button">↪️</button>
+            <button id="playPauseBtn" class="button">▶️</button>
+          </div>
         </div>
-        <div class="controls">
-          <button id="restartBtn" class="button">
-            ↪️
-          </button>
-          <button id="playPauseBtn" class="button">▶️</button>
+
+        <div id="input">
+          <p id="studyTimeDisplay">
+            Study Time (minutes): 
+            <input type="number" id="studyTimeInput" placeholder="enter time" />
+          </p>
+          <p id="breakTimeDisplay">
+            Break Time (minutes): 
+            <input type="number" id="breakTimeInput" placeholder="enter time" />
+          </p>
         </div>
       </div>
-
-      <div class="input">
-        <input
-          type="number"
-          id="studyTimeInput"
-          placeholder="Studying time (minutes)"
-        />
-
-        <input
-          type="number"
-          id="breakTimeInput"
-          placeholder="Break time (minutes)"
-        />
-      </div>
-
-      <p id="studyTimeDisplay">Study Time:</p>
-      <p id="breakTimeDisplay">Break Time:</p>
     </main>
     <script src="script.js"></script>
   </body>

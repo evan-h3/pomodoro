@@ -29,13 +29,13 @@ document.getElementById("breakTimeInput").addEventListener("input", (event) => {
 
 document.getElementById("playPauseBtn").addEventListener("click", startTimer);
 
-function assignNumber() {
-  //Display the values
-  document.getElementById("studyTimeDisplay").innerText =
-    "Study Time: " + studyTime + " minutes";
-  document.getElementById("breakTimeDisplay").innerText =
-    "Break Time: " + breakTime + " minutes";
-}
+// function assignNumber() {
+//   //Display the values
+//   document.getElementById("studyTimeDisplay").innerText =
+//     "Study Time: " + studyTime + " minutes";
+//   document.getElementById("breakTimeDisplay").innerText =
+//     "Break Time: " + breakTime + " minutes";
+// }
 
 document.getElementById("restartBtn").addEventListener("click", () => {
   clearInterval(timerID);
