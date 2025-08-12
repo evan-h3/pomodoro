@@ -1,3 +1,3 @@
 # pomodoro
 
-pomodoro timer i built to help learn web development
+i built this simple web app to help teach myself web dev
