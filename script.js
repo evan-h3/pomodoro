@@ -8,11 +8,10 @@ let phase = "study";
 let timerID = null;
 let isRunning = false; //toggle for play and pause
 
-//circle setup
+// ====== Circle setup ======
 const circle = document.getElementById("timer-circle"); //get the timer circle
 const radius = circle.r.baseVal.value; //get the radius from the circle
 const circumference = 2 * Math.PI * radius; // calculate the circumference
-console.log("radius:", radius, "circumference:", circumference);
 circle.style.strokeDasharray = circumference;
 circle.style.strokeDashoffset = circumference;
 
